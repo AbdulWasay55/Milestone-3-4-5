@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Editable Dynamic Resume </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <h1>Dynamic Resume</h1>
+    <!-- Form Section -->
+     <form id="form">
+        <!-- Personal Information Section -->
+         <section id="personal-information">
+        <h3 class="personal-information-heading">Personal Information</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name " required>
+        <label for="contact">Contact:</label>
+        <input type="number" id="contact" placeholder="Enter your number " required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email " required>
+    </section>
+    <!-- Education Section  -->
+     <section id="education-section">
+        <label for="education">Education:</label>
+        <textarea name="education" id="education" rows="4" placeholder="Enter your Education" required></textarea>
+     </section>
+<!-- work /experience section -->
+<section id="work-section">
+    <label for="work-experience">Work Experience:</label>
+    <textarea name="work-experience" id="work-experience" rows="4" placeholder="Enter your Work Experience" required></textarea>
+ </section>
+ <!-- Skills Section -->
+ <section id="skill-section">
+    <label for="skill">Skills:</label>
+    <textarea name="skill" id="skill" rows="4" placeholder="Enter your Skills" required></textarea>
+ </section>
+<button id="generate">Generate Resume</button>
+
+     </form>
+    </main>
+<br>
+    <div id="resume-display" contenteditable="true" style="display: none;">
+        <!-- the resume will generate here -->
+    </div>
+    <br>
+    <!-- Shareable link container -->
+    <div id="shareable-link-container" style="display: none;">
+        <p>Shareable Link:</p>
+        <a id="shareable-link" href="#" target="_blank"></a>
+    </div>
+    <button id="download-resume" style="display:none;">Download Resume</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
